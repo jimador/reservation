@@ -1,14 +1,18 @@
 package com.code4profit.reservation
 
-import com.code4profit.reservation.domain.Reservation
+import com.code4profit.reservation.domain.Location
+import  com.code4profit.reservation.domain.Reservation
+import com.code4profit.reservation.repository.LocationRepository
 import com.code4profit.reservation.repository.ReservationRepository
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.event.ApplicationReadyEvent
 import org.springframework.boot.runApplication
 import org.springframework.context.ApplicationListener
 import org.springframework.context.support.beans
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @SpringBootApplication
+@EnableJpaRepositories(basePackageClasses = [LocationRepository::class])
 class ReservationServiceApplication
 
 fun main(args: Array<String>) {
@@ -16,11 +20,16 @@ fun main(args: Array<String>) {
         val config = beans {
             bean {
                 ApplicationListener<ApplicationReadyEvent> {
-                    val repository = ref<ReservationRepository>()
-                    listOf("James", "John", "Steve", "Frank", "Dooof", "Jax")
-                            .map { Reservation(null, it) }
-                            .map { repository.save(it) }
-                            .forEach { println(it) }
+                    val resRepository = ref<ReservationRepository>()
+                    val locationRepository = ref<LocationRepository>()
+                    val reservations = listOf("James", "John", "Steve", "Frank", "Dooof", "Jax")
+                        .map { Reservation(null, it) }
+                        .map { resRepository.save(it) }
+
+                    val locations = listOf("McDonalds")
+                        .map { Location(null, it, resRepository.findAll()) }
+                        .map { locationRepository.save(it) }
+
                 }
             }
         }

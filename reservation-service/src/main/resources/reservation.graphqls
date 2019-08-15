@@ -1,0 +1,9 @@
+type Query {
+    reservations(locationId: ID!) : [Reservation]
+}
+
+type Reservation {
+    id: ID!
+    name: String
+}
+
