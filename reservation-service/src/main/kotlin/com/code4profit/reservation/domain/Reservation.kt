@@ -1,6 +1,8 @@
 package com.code4profit.reservation.domain
 
-import javax.persistence.*
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
 import javax.validation.constraints.NotBlank
 
 @Entity

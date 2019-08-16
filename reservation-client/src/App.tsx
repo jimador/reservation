@@ -1,33 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import log from 'loglevel';
+import React from 'react';
+import {useQuery} from '@apollo/react-hooks';
+import {gql} from 'apollo-boost';
 
-interface IReservation {
-  id: number;
-  name: string;
+
+interface ILocation {
+    id: number;
+    name: string;
+    reservations: IReservation[];
 }
 
-const App: React.FC = () => {
-      const [state, setState] = useState<IReservation[]>([]);
+interface IReservation {
+    id: number;
+    name: string;
+}
 
-      useEffect(() => {
-        axios.get('http://localhost:8080/api/reservations')
-            .then(response => setState(response.data))
-            .catch(err => log.error(err));
-      });
-
-      return (
-          <div className="App">
-            <h1>
-              <strong>Hello World</strong>
-              {state.map((item: IReservation, index: number) => (
-                      <li key={item.id}>{item.name}</li>
-                  )
-              )}
-            </h1>
-          </div>
-      );
+const LOCATIONS_QUERY = gql`
+    {
+        locations {
+            name
+            reservations {
+                name
+            }
+        }
     }
-;
+`;
+
+const App: React.FC = () => {
+
+    const {loading, error, data} = useQuery(LOCATIONS_QUERY);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    if (error) {
+        return <p>Error :(</p>;
+    }
+
+    const locs = data.locations;
+    return (
+        <div>
+            {locs.map((location: ILocation, locIdx: number) => {
+                return (
+                    <div key={locIdx}>
+                        <h2>{location.name}</h2>
+                        <ul>
+                            {location.reservations.map((res: IReservation, resIdx: number) => {
+                                return <div key={resIdx}>{res.name}</div>;
+                            })}
+                        </ul>
+                    </div>
+                );
+            })}
+        </div>
+    );
+};
 
 export default App;

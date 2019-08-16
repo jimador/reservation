@@ -1,18 +1,45 @@
 {
-  "extends": ["tslint:latest", "tslint-eslint-rules", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint:latest",
+    "tslint-eslint-rules",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
   "jsRules": {
     "class-name": true,
-    "comment-format": [true, "check-space"],
+    "comment-format": [
+      true,
+      "check-space"
+    ],
     "eofline": true,
     "forin": true,
-    "indent": [true, "spaces", 2],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
     "label-position": true,
-    "max-line-length": [true, 180],
+    "max-line-length": [
+      true,
+      180
+    ],
     "member-access": false,
-    "member-ordering": [true, "static-before-instance", "variables-before-functions"],
+    "member-ordering": [
+      true,
+      "static-before-instance",
+      "variables-before-functions"
+    ],
     "no-arg": true,
     "no-bitwise": false,
-    "no-console": [true, "log", "debug", "info", "time", "timeEnd", "trace"],
+    "no-console": [
+      true,
+      "log",
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
@@ -22,24 +49,68 @@
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "no-trailing-whitespace": true,
-    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-unused-expression": [
+      true,
+      "allow-fast-null-checks"
+    ],
     "no-var-keyword": true,
-    "no-implicit-dependencies": [true, "dev"],
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
     "object-literal-sort-keys": false,
-    "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
-    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape"
+    ],
     "radix": true,
-    "semicolon": [true, "always", "ignore-bound-class-methods"],
-    "triple-equals": [true, "allow-null-check"],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
     "variable-name": false,
-    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ],
     "prefer-const": true,
-    "arrow-parens": [true, "ban-single-arg-parens"],
-    "arrow-return-shorthand": [true],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "arrow-return-shorthand": [
+      true
+    ],
     "import-spacing": true,
-    "no-consecutive-blank-lines": [true],
+    "no-consecutive-blank-lines": [
+      true
+    ],
     "object-literal-shorthand": true,
-    "space-before-function-paren": [true, { "named": "never", "asyncArrow": "always" }],
+    "space-before-function-paren": [
+      true,
+      {
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
     "trailing-comma": [
       true,
       {
@@ -47,18 +118,38 @@
         "singleline": "never"
       }
     ],
-    "ordered-imports": [false],
-    "curly": [true, "ignore-same-line"],
+    "ordered-imports": [
+      false
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
     "switch-default": true,
-    "cyclomatic-complexity": [true, 40],
-    "no-invalid-this": [true],
+    "cyclomatic-complexity": [
+      true,
+      40
+    ],
+    "no-invalid-this": [
+      true
+    ],
     "no-magic-numbers": false,
-
-    "ter-arrow-body-style": [true],
-    "ter-no-irregular-whitespace": [true],
-    "ter-no-sparse-arrays": [true],
-    "ter-func-call-spacing": [true, "never"],
-    "no-multi-spaces": [true],
+    "ter-arrow-body-style": [
+      true
+    ],
+    "ter-no-irregular-whitespace": [
+      true
+    ],
+    "ter-no-sparse-arrays": [
+      true
+    ],
+    "ter-func-call-spacing": [
+      true,
+      "never"
+    ],
+    "no-multi-spaces": [
+      true
+    ],
     "brace-style": [
       true,
       "1tbs",
@@ -66,41 +157,95 @@
         "allowSingleLine": true
       }
     ],
-    "object-curly-spacing": [true, "always"],
-    "space-in-parens": [true, "never"]
+    "object-curly-spacing": [
+      true,
+      "always"
+    ],
+    "space-in-parens": [
+      true,
+      "never"
+    ]
   },
   "rules": {
     "class-name": true,
-    "comment-format": [true, "check-space"],
+    "comment-format": [
+      true,
+      "check-space"
+    ],
     "eofline": true,
     "forin": true,
-    "indent": [true, "spaces", 2],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
     "label-position": true,
-    "max-line-length": [true, 180],
+    "max-line-length": [
+      true,
+      180
+    ],
     "member-access": false,
-    "member-ordering": [true, "static-before-instance", "variables-before-functions"],
+    "member-ordering": [
+      true,
+      "static-before-instance",
+      "variables-before-functions"
+    ],
     "no-arg": true,
     "no-bitwise": false,
-    "no-console": [true, "log", "debug", "info", "time", "timeEnd", "trace"],
+    "no-console": [
+      true,
+      "log",
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
     "no-empty": false,
     "no-eval": true,
-    "no-inferrable-types": [true],
+    "no-inferrable-types": [
+      true
+    ],
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "no-trailing-whitespace": true,
-    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-unused-expression": [
+      true,
+      "allow-fast-null-checks"
+    ],
     "no-var-keyword": true,
-    "no-implicit-dependencies": [false, "dev"],
+    "no-implicit-dependencies": [
+      false,
+      "dev"
+    ],
     "object-literal-sort-keys": false,
-    "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
-    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape"
+    ],
     "radix": true,
-    "semicolon": [true, "always", "ignore-bound-class-methods"],
-    "triple-equals": [true, "allow-null-check"],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
     "typedef-whitespace": [
       true,
       {
@@ -124,12 +269,25 @@
       "check-preblock"
     ],
     "prefer-const": true,
-    "arrow-parens": [true, "ban-single-arg-parens"],
-    "arrow-return-shorthand": [true],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "arrow-return-shorthand": [
+      true
+    ],
     "import-spacing": true,
-    "no-consecutive-blank-lines": [true],
+    "no-consecutive-blank-lines": [
+      true
+    ],
     "object-literal-shorthand": true,
-    "space-before-function-paren": [true, { "named": "never", "asyncArrow": "always" }],
+    "space-before-function-paren": [
+      true,
+      {
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
     "trailing-comma": [
       true,
       {
@@ -137,21 +295,56 @@
         "singleline": "never"
       }
     ],
-    "ordered-imports": [false],
-    "curly": [true, "ignore-same-line"],
+    "ordered-imports": [
+      false
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
     "switch-default": true,
-    "cyclomatic-complexity": [true, 40],
-    "no-invalid-this": [true],
+    "cyclomatic-complexity": [
+      true,
+      40
+    ],
+    "no-invalid-this": [
+      true
+    ],
     "no-magic-numbers": false,
-    "ban-types": [true, ["Object", "Use {} instead."]],
-    "no-submodule-imports": [true, "app", "uuid/v4", "@fortawesome", "lodash", "react-toastify"],
-
-    "ter-arrow-body-style": [true],
-    "ter-no-irregular-whitespace": [true],
-    "ter-no-sparse-arrays": [true],
-    "ter-func-call-spacing": [true, "never"],
-    "no-multi-spaces": [true],
-    "array-bracket-spacing": [false],
+    "ban-types": [
+      true,
+      [
+        "Object",
+        "Use {} instead."
+      ]
+    ],
+    "no-submodule-imports": [
+      true,
+      "app",
+      "uuid/v4",
+      "@fortawesome",
+      "lodash",
+      "react-toastify"
+    ],
+    "ter-arrow-body-style": [
+      true
+    ],
+    "ter-no-irregular-whitespace": [
+      true
+    ],
+    "ter-no-sparse-arrays": [
+      true
+    ],
+    "ter-func-call-spacing": [
+      true,
+      "never"
+    ],
+    "no-multi-spaces": [
+      true
+    ],
+    "array-bracket-spacing": [
+      false
+    ],
     "brace-style": [
       true,
       "1tbs",
@@ -159,10 +352,18 @@
         "allowSingleLine": true
       }
     ],
-    "object-curly-spacing": [true, "always"],
-    "space-in-parens": [true, "never"],
-
-    "jsx-boolean-value": [true, "never"],
+    "object-curly-spacing": [
+      true,
+      "always"
+    ],
+    "space-in-parens": [
+      true,
+      "never"
+    ],
+    "jsx-boolean-value": [
+      true,
+      "never"
+    ],
     "jsx-no-multiline-js": false,
     "jsx-alignment": false
   },

@@ -6,7 +6,7 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver
 import org.springframework.stereotype.Component
 
 @Component
-class LocationQueryResolver(private val locationRepository: LocationRepository): GraphQLQueryResolver {
+class LocationQueryResolver(private val locationRepository: LocationRepository) : GraphQLQueryResolver {
 
     fun locations(): List<Location> {
         return locationRepository.findAll()

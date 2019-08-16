@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = ["*"])
 class ReservationResource(private val repository: ReservationRepository) {
 
     @GetMapping("/reservations")
