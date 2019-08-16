@@ -7,3 +7,7 @@ type Location {
     name: String!
     reservations: [Reservation]
 }
+
+extend type Mutation {
+    newLocation(name: String!): Location
+}

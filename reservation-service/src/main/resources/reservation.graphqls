@@ -7,3 +7,8 @@ type Reservation {
     name: String
 }
 
+type Mutation {
+    newReservation(name: String!, locationId: ID!) : Reservation!
+    deleteReservation(id: ID!) : Boolean
+    updateReservation(id:ID!, locationId: ID!) : Reservation!
+}

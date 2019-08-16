@@ -11,6 +11,6 @@ class ReservationQueryResolver(private val locationRepository: LocationRepositor
     fun reservations(locationId: Long): List<Reservation> {
         return locationRepository.findById(locationId)
             .map { it.reservations }
-            .orElse(emptyList())
+            .orElse(mutableListOf())
     }
 }

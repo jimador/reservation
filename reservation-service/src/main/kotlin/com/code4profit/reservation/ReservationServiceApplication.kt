@@ -18,13 +18,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 @SpringBootApplication
 @EnableJpaRepositories(basePackageClasses = [LocationRepository::class])
 class ReservationServiceApplication {
-    @Configuration
-    @EnableWebMvc
-    class WebConfig : WebMvcConfigurer {
-        override fun addCorsMappings(registry: CorsRegistry) {
-            registry.addMapping("/**");
-        }
-    }
+//    @Configuration
+//    @EnableWebMvc
+//    class WebConfig : WebMvcConfigurer {
+//        override fun addCorsMappings(registry: CorsRegistry) {
+//            registry.addMapping("/**");
+//        }
+//    }
 }
 
 fun main(args: Array<String>) {
