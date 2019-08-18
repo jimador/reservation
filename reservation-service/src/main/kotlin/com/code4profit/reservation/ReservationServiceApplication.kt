@@ -18,13 +18,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 @SpringBootApplication
 @EnableJpaRepositories(basePackageClasses = [LocationRepository::class])
 class ReservationServiceApplication {
-//    @Configuration
-//    @EnableWebMvc
-//    class WebConfig : WebMvcConfigurer {
-//        override fun addCorsMappings(registry: CorsRegistry) {
-//            registry.addMapping("/**");
-//        }
-//    }
+    @Configuration
+    @EnableWebMvc
+    class WebConfig : WebMvcConfigurer {
+        override fun addCorsMappings(registry: CorsRegistry) {
+            registry.addMapping("/**")
+        }
+    }
 }
 
 fun main(args: Array<String>) {
@@ -34,11 +34,11 @@ fun main(args: Array<String>) {
                 ApplicationListener<ApplicationReadyEvent> {
                     val resRepository = ref<ReservationRepository>()
                     val locationRepository = ref<LocationRepository>()
-                    val reservations = listOf("James", "John", "Steve", "Frank", "Dooof", "Jax")
+                    listOf("James", "John", "Steve", "Frank", "Dooof", "Jax")
                         .map { Reservation(null, it) }
                         .map { resRepository.save(it) }
 
-                    val locations = listOf("McDonalds")
+                    listOf("McDonalds")
                         .map { Location(null, it, resRepository.findAll()) }
                         .map { locationRepository.save(it) }
 
