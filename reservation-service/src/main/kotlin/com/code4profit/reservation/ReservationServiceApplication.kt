@@ -38,8 +38,8 @@ fun main(args: Array<String>) {
                         .map { Reservation(null, it) }
                         .map { resRepository.save(it) }
 
-                    listOf("McDonalds")
-                        .map { Location(null, it, resRepository.findAll()) }
+                    listOf("McDonalds", "Burger King")
+                        .map { Location(null, it).addReservations(resRepository.findAll()) }
                         .map { locationRepository.save(it) }
 
                 }
