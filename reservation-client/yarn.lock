@@ -1257,6 +1257,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-helmet@^5.0.9":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-5.0.17.tgz#a1d1dbbfad7e76b4392bb65ad2b5fd393f081975"
+  integrity sha512-u6JnPr8YTINhGwLAEKaEbYNbhZAJE304yk+SRYWThAi4iHYHmiDZ4mj1f6ES8v/y0CUvQFSzcppfdod3wD7ihg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@16.9.1":
   version "16.9.1"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.1.tgz#862c83b4c9d5cd116e42fd9a4f3694843cd2c051"
@@ -9576,9 +9583,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
